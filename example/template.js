@@ -1,0 +1,574 @@
+exports = module.exports = [
+    {
+        active: false,
+        origin: 'site',
+        name: 'Gamer.no',
+        url: 'http://www.gamer.no',
+        tags: ['gaming', 'technology'],
+        format: 'desktop',
+        body: true,
+        template: {
+            containers: [
+                {
+                    selector: 'article',
+                    elements: [
+                        {
+                            name: 'guid',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'h2 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'link',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'h2 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'title',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'h2 a'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'ingress',
+                            items: [
+                                {
+                                    selector: 'p',
+                                    delimiter: '\n'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'image',
+                            type: 'url',
+                            fallback: 'http://someimageurl.com/1.png',
+                            items: [
+                                {
+                                    selector: 'figure a img',
+                                    attribute: 'src'
+                                },
+                                {
+                                    selector: 'figure a div.delay-image-load',
+                                    attribute: 'data-src-normal'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        active: false,
+        origin: 'site',
+        name: 'IGN Norge',
+        url: 'http://no.ign.com',
+        tags: ['gaming', 'technology'],
+        format: 'desktop',
+        body: true,
+        template: {
+            containers: [
+                {
+                    selector: 'div.headlines',
+                    elements: [
+                        {
+                            name: 'guid',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'h3 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'link',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'h3 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'title',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'h3 a',
+                                }
+                            ]
+                        },
+                        {
+                            name: 'image',
+                            type: 'url',
+                            fallback: 'http://someimageurl.com/image.png',
+                            items: [
+                                {
+                                    selector: 'div.img-thumb a img',
+                                    attribute: 'src'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        active: false,
+        origin: 'site',
+        name: 'Pressfire.no',
+        url: 'http://www.pressfire.no/',
+        tags: ['gaming', 'technology'],
+        format: 'desktop',
+        body: true,
+        template: {
+            containers: [
+                {
+                    selector: '#top-article',
+                    elements: [
+                        {
+                            name: 'guid',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'div.top-article-meta h2 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'link',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'div.top-article-meta h2 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'title',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'div.top-article-meta h2 a'
+                                }
+                            ]
+                        },
+                        {   
+                            name: 'image',
+                            type: 'url',
+                            fallback: 'http://www.pressfire.no/gfx/pressfire-logo.png',
+                            items: [
+                                {
+                                    selector: 'div.image-article-meta a img',
+                                    attribute: 'src'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    selector: 'div.large-article',
+                    elements: [
+                        {
+                            name: 'guid',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'div.large-meta h2 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'link',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'div.large-meta h2 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'title',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'div.large-meta h2 a'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'image',
+                            type: 'url',
+                            fallback: 'http://www.pressfire.no/gfx/pressfire-logo.png',
+                            items: [
+                                {
+                                    selector: 'div.image-article-meta a img',
+                                    attribute: 'src'
+                                },
+                                {
+                                    selector: 'div.article-image-container a img',
+                                    attribute: 'src'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    selector: 'div.small-article',
+                    elements: [
+                        {
+                            name: 'guid',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'div.article-meta h2 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'link',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'div.article-meta h2 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'title',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'div.article-meta h2 a'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'image',
+                            type: 'url',
+                            fallback: 'http://www.pressfire.no/gfx/pressfire-logo.png',
+                            items: [
+                                {
+                                    selector: 'div.article-image-container a img',
+                                    attribute: 'src'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        active: false,
+        origin: 'site',
+        name: 'Spillfreak.no',
+        url: 'http://www.spillfreak.no',
+        tags: ['gaming', 'technology'],
+        format: 'desktop',
+        body: true,
+        template: {
+            containers: [
+                {
+                    selector: 'div.blog-item',
+                    elements: [
+                        {
+                            name: 'guid',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'div.archive-text h2 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'link',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'div.archive-text h2 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'title',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'div.archive-text h2 a'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'ingress',
+                            items: [
+                                {
+                                    selector: 'div.archive-text p',
+                                    delimiter: ' ... Read More'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'image',
+                            type: 'url',
+                            fallback: 'http://someimageurl.comm/1.png',
+                            items: [
+                                {
+                                    selector: 'div.item-image a img',
+                                    attribute: 'src'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        active: false,
+        origin: 'site',
+        name: 'Tv2 Nettavisen',
+        url: 'http://www.nettavisen.no/',
+        tags: ['nyheter', 'innenriks'],
+        format: 'desktop',
+        body: true,
+        template: {
+            containers: [
+                {
+                    selector: '.article-content',
+                    elements: [
+                        {
+                            name: 'guid',
+                            type: 'url',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'h5 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h4 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h3 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h2 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h1 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'link',
+                            type: 'url',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'h5 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h4 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h3 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h2 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h1 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'title',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'h5 a'
+                                },
+                                {
+                                    selector: 'h4 a'
+                                },
+                                {
+                                    selector: 'h3 a'
+                                },
+                                {
+                                    selector: 'h2 a'
+                                },
+                                {
+                                    selector: 'h1 a'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'ingress',
+                            items: [
+                                {
+                                    selector: 'span.df-img-container-inner a img',
+                                    attribute: 'alt'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'image',
+                            type: 'url',
+                            fallback: 'http://someimageurl.comm/1.png',
+                            items: [
+                                {
+                                    selector: 'span.df-img-container-inner a img',
+                                    attribute: 'src'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+        {
+        active: true,
+        origin: 'site',
+        name: 'sol.no',
+        url: 'http://www.sol.no/',
+        tags: ['nyheter', 'innenriks'],
+        format: 'desktop',
+        body: true,
+        template: {
+            containers: [
+                {
+                    selector: '.article-content',
+                    elements: [
+                        {
+                            name: 'guid',
+                            type: 'url',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'h5 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h4 a',
+                                    attribute: 'href'
+                                },{
+                                    selector: 'h3 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h2 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h1 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'link',
+                            type: 'url',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'h5 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h4 a',
+                                    attribute: 'href'
+                                },{
+                                    selector: 'h3 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h2 a',
+                                    attribute: 'href'
+                                },
+                                {
+                                    selector: 'h1 a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'title',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'h5 a'
+                                },
+                                {
+                                    selector: 'h4 a'
+                                },
+                                {
+                                    selector: 'h3 a'
+                                },
+                                {
+                                    selector: 'h2 a'
+                                },
+                                {
+                                    selector: 'h1 a'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'ingress',
+                            items: [
+                                {
+                                    selector: 'span.df-img-container-inner a img',
+                                    attribute: 'alt'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'image',
+                            type: 'url',
+                            fallback: 'http://someimageurl.com/1.png',
+                            items: [
+                                {
+                                    selector: 'span.df-img-container-inner a img',
+                                    attribute: 'data-original'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+];
