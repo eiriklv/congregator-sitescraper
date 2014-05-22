@@ -18,7 +18,7 @@ var getSites = function (options, callback) {
 };
 
 // SiteScraper
-var SiteScraper = require('../lib')();
+var SiteScraper = require('../lib');
 
 // website scraper module
 var siteScraper = new SiteScraper({

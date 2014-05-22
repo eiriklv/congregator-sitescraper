@@ -4,7 +4,8 @@ exports = module.exports = [
         origin: 'site',
         name: 'Gamer.no',
         url: 'http://www.gamer.no',
-        tags: ['gaming', 'technology'],
+        linkref: 'url',
+        category: 1,
         format: 'desktop',
         body: true,
         template: {
@@ -23,7 +24,7 @@ exports = module.exports = [
                             ]
                         },
                         {
-                            name: 'link',
+                            name: 'url',
                             type: 'url',
                             items: [
                                 {
@@ -42,7 +43,7 @@ exports = module.exports = [
                             ]
                         },
                         {
-                            name: 'ingress',
+                            name: 'description',
                             items: [
                                 {
                                     selector: 'p',
@@ -75,7 +76,8 @@ exports = module.exports = [
         origin: 'site',
         name: 'IGN Norge',
         url: 'http://no.ign.com',
-        tags: ['gaming', 'technology'],
+        linkref: 'url',
+        category: 1,
         format: 'desktop',
         body: true,
         template: {
@@ -94,7 +96,7 @@ exports = module.exports = [
                             ]
                         },
                         {
-                            name: 'link',
+                            name: 'url',
                             type: 'url',
                             items: [
                                 {
@@ -108,7 +110,7 @@ exports = module.exports = [
                             required: true,
                             items: [
                                 {
-                                    selector: 'h3 a',
+                                    selector: 'h3 a'
                                 }
                             ]
                         },
@@ -133,7 +135,8 @@ exports = module.exports = [
         origin: 'site',
         name: 'Pressfire.no',
         url: 'http://www.pressfire.no/',
-        tags: ['gaming', 'technology'],
+        linkref: 'url',
+        category: 1,
         format: 'desktop',
         body: true,
         template: {
@@ -152,7 +155,7 @@ exports = module.exports = [
                             ]
                         },
                         {
-                            name: 'link',
+                            name: 'url',
                             type: 'url',
                             items: [
                                 {
@@ -170,7 +173,7 @@ exports = module.exports = [
                                 }
                             ]
                         },
-                        {   
+                        {
                             name: 'image',
                             type: 'url',
                             fallback: 'http://www.pressfire.no/gfx/pressfire-logo.png',
@@ -197,7 +200,7 @@ exports = module.exports = [
                             ]
                         },
                         {
-                            name: 'link',
+                            name: 'url',
                             type: 'url',
                             items: [
                                 {
@@ -246,7 +249,7 @@ exports = module.exports = [
                             ]
                         },
                         {
-                            name: 'link',
+                            name: 'url',
                             type: 'url',
                             items: [
                                 {
@@ -285,7 +288,8 @@ exports = module.exports = [
         origin: 'site',
         name: 'Spillfreak.no',
         url: 'http://www.spillfreak.no',
-        tags: ['gaming', 'technology'],
+        linkref: 'url',
+        category: 1,
         format: 'desktop',
         body: true,
         template: {
@@ -304,7 +308,7 @@ exports = module.exports = [
                             ]
                         },
                         {
-                            name: 'link',
+                            name: 'url',
                             type: 'url',
                             items: [
                                 {
@@ -323,7 +327,7 @@ exports = module.exports = [
                             ]
                         },
                         {
-                            name: 'ingress',
+                            name: 'description',
                             items: [
                                 {
                                     selector: 'div.archive-text p',
@@ -352,7 +356,8 @@ exports = module.exports = [
         origin: 'site',
         name: 'Tv2 Nettavisen',
         url: 'http://www.nettavisen.no/',
-        tags: ['nyheter', 'innenriks'],
+        linkref: 'url',
+        category: 1,
         format: 'desktop',
         body: true,
         template: {
@@ -388,7 +393,7 @@ exports = module.exports = [
                             ]
                         },
                         {
-                            name: 'link',
+                            name: 'url',
                             type: 'url',
                             required: true,
                             items: [
@@ -436,7 +441,7 @@ exports = module.exports = [
                             ]
                         },
                         {
-                            name: 'ingress',
+                            name: 'description',
                             items: [
                                 {
                                     selector: 'span.df-img-container-inner a img',
@@ -460,12 +465,13 @@ exports = module.exports = [
             ]
         }
     },
-        {
+    {
         active: true,
         origin: 'site',
         name: 'sol.no',
         url: 'http://www.sol.no/',
-        tags: ['nyheter', 'innenriks'],
+        linkref: 'url',
+        category: 1,
         format: 'desktop',
         body: true,
         template: {
@@ -500,7 +506,7 @@ exports = module.exports = [
                             ]
                         },
                         {
-                            name: 'link',
+                            name: 'url',
                             type: 'url',
                             required: true,
                             items: [
@@ -547,7 +553,7 @@ exports = module.exports = [
                             ]
                         },
                         {
-                            name: 'ingress',
+                            name: 'description',
                             items: [
                                 {
                                     selector: 'span.df-img-container-inner a img',
