@@ -17,10 +17,8 @@ var getSites = function (options, callback) {
     callback(null, sites.filter(isActive));
 };
 
-// SiteScraper
 var SiteScraper = require('../lib');
 
-// website scraper module
 var siteScraper = new SiteScraper({
     getSources: getSites,
     handleEntry: handleEntry,
