@@ -1,5 +1,5 @@
 {
-  "name": "congregator-sitescraper",
+  "name": "sitescraper",
   "version": "1.0.0",
   "main": "./lib/index",
   "description": "Site scraper for Congregator",
