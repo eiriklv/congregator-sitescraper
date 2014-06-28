@@ -466,7 +466,7 @@ exports = module.exports = [
         }
     },
     {
-        active: true,
+        active: false,
         origin: 'site',
         name: 'sol.no',
         url: 'http://www.sol.no/',
@@ -569,6 +569,54 @@ exports = module.exports = [
                                 {
                                     selector: 'span.df-img-container-inner a img',
                                     attribute: 'data-original'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        active: true,
+        origin: 'site',
+        name: 'Hacker News',
+        url: 'http://news.ycombinator.com',
+        linkref: 'url',
+        category: 1,
+        format: 'desktop',
+        body: true,
+        template: {
+            containers: [
+                {
+                    selector: 'tr td.title',
+                    elements: [
+                        {
+                            name: 'guid',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'url',
+                            type: 'url',
+                            items: [
+                                {
+                                    selector: 'a',
+                                    attribute: 'href'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'title',
+                            required: true,
+                            items: [
+                                {
+                                    selector: 'a'
                                 }
                             ]
                         }
