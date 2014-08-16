@@ -30,7 +30,7 @@ var getSites = function (options, callback) {
     callback(null, sites.filter(isActive));
 };
 
-var SiteScraper = require('sitescraper');
+var SiteScraper = require('congregator-sitescraper');
 
 var siteScraper = new SiteScraper({
     getSources: getSites,
@@ -54,7 +54,7 @@ siteScraper.run();
     "name": "Hacker News",
     "url": "http://news.ycombinator.com",
     "linkref": "url",
-    "category": 1,
+    "category": ['technology', 'hackernews'],
     "format": "desktop",
     "body": true,
     "template": {
@@ -106,7 +106,7 @@ siteScraper.run();
         "source": "http://news.ycombinator.com",
         "host": "news.ycombinator.com",
         "origin": "site",
-        "category": 1,
+        "category": ['technology', 'hackernews'],
         "guid": "http://blog.ycombinator.com/last-day-to-apply-to-yc-hacks",
         "url": "http://blog.ycombinator.com/last-day-to-apply-to-yc-hacks",
         "title": "Last day to apply to YC Hacks",
